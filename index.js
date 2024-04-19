@@ -33,11 +33,11 @@ function handleFormSubmit(event){
       edtButton.textContent='Edit Expense';
       edtButton.onclick = () => {
         parent.removeChild(li);
-          console.log(localStorage.getItem(obj.Amount));
-          document.getElementById('amount').value = localStorage.getItem(obj.amount);
-          console.log(document.getElementById('amount').value );
-          document.getElementById('discription').value = localStorage.getItem(obj.discription);
-          document.getElementById('category').value = localStorage.getItem(obj.category);
+        
+          document.getElementById('amount').value =obj.amount;
+      
+          document.getElementById('discription').value = obj.discription;
+          document.getElementById('category').value =obj.category;
          localStorage.removeItem(discription);
       };
       li.appendChild(edtButton);
